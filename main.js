@@ -337,7 +337,11 @@ function load() {
             lodSearch(document.getElementById('word').value.trim())
         })
         document.getElementById('clipboard').addEventListener('click', e => {
-            clipboard(document.getElementById('phonetic-transcription').value.trim())
+            clipboard(document.getElementById('phonetic-transcription').value.trim(), document.getElementById('word').value.trim())
+        })
+        document.getElementById('clear').addEventListener('click', e => {
+            document.getElementById('phonetic-transcription').value = ''
+            document.getElementById('word').value = ''
         })
         Array.from(document.querySelectorAll('.panel button.phoneme')).forEach(e => {
             e.addEventListener('click', event => {
