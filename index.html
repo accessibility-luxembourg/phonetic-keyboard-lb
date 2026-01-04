@@ -40,6 +40,8 @@
                 font-size: 1.2em;
                 font-weight: 700;
                 font-family: 'Courier New', monospace;
+                display: flex;
+                flex-direction: column;
             }
 
             button.shortcut {
@@ -90,6 +92,13 @@
                 background-color: #eeeeee;
             }
 
+            .ipa-reminder {
+                font-size: 0.7em;
+                margin-top: 6px;
+                font-weight: normal;
+                font-family: sans-serif;
+            }
+
         </style>
         <script src="main.js"></script>
 
@@ -125,11 +134,11 @@
     <div class="desc"><button class="example" lang="lb"><b>d</b>eenen</button></div>
 </div>
 <div>
-    <button class="phoneme">D</button>
-    <div class="desc">/dh ?</div>
+    <button class="phoneme">D<span class="ipa-reminder">ð</span></button>
+    <div class="desc"></div>
 </div>
 <div>
-    <button class="phoneme">d_Z</button>
+    <button class="phoneme">d_Z<span class="ipa-reminder">d͡ʒ</span></button>
     <div class="desc"><button class="example" lang="lb"><b>J</b>eans</button><br><button class="example" lang="lb"><b>Dsch</b>ibuti</button><br><button class="example" lang="lb">A<b>dj</b>ektiv</button></div>
 </div>
 <div>  
@@ -169,7 +178,7 @@
     <div class="desc"><button class="example" lang="lb">o<b>n</b>ee<b>n</b>s</button></div>
 </div>
 <div> 
-    <button class="phoneme">N</button>
+    <button class="phoneme">N<span class="ipa-reminder">ŋ</span></button>
     <div class="desc"><button class="example" lang="lb">de<b>ng</b>en</button></div>
 </div>
 <div> 
@@ -177,11 +186,11 @@
     <div class="desc"><button class="example" lang="lb"><b>p</b>ii<b>p</b>seg</button><br><button class="example" lang="lb">o<b>b</b></button></div>
 </div>
 <div> 
-    <button class="phoneme">R</button>
+    <button class="phoneme">R<span class="ipa-reminder">ʁ</span></button>
     <div class="desc"><button class="example" lang="lb">da<b>g</b>siwwer</button></div>
 </div>
 <div> 
-    <button class="phoneme">R\</button>
+    <button class="phoneme">R\<span class="ipa-reminder">ʀ</span></button>
     <div class="desc"><button class="example" lang="lb"><b>r</b>eeneg</button><br><button class="example" lang="lb">Comptoi<b>r</b></button></div>
 </div>
 <div> 
@@ -189,11 +198,11 @@
     <div class="desc"><button class="example" lang="lb">ru<b>ss</b>esch</button><br><button class="example" lang="lb">hai<b>s</b>lech</button></div>
 </div>
 <div> 
-    <button class="phoneme">S</button>
+    <button class="phoneme">S<span class="ipa-reminder">ʃ</span></button>
     <div class="desc"><button class="example" lang="lb"><b>Sch</b>eedgen</button><br><button class="example" lang="lb"><b>s</b>tréieg</button></div>
 </div>
 <div> 
-    <button class="phoneme">s\</button>
+    <button class="phoneme">s\<span class="ipa-reminder">ɕ</span></button>
     <div class="desc"><button class="example" lang="lb">Ee<b>ch</b>en</button><br><button class="example" lang="lb">bewee<b>g</b>le<b>ch</b></button></div>
 </div>
 <div> 
@@ -201,11 +210,11 @@
     <div class="desc"><button class="example" lang="lb"><b>T</b>ënten</button><br><button class="example" lang="lb">fa<b>d</b></button></div>
 </div>
 <div> 
-    <button class="phoneme">T</button>
+    <button class="phoneme">T<span class="ipa-reminder">θ</span></button>
     <div class="desc"><button class="example" lang="lb">wi<b>th</b></button></div>
 </div>
 <div> 
-    <button class="phoneme">t_s</button>
+    <button class="phoneme">t_s<span class="ipa-reminder">t͡s</span></button>
     <div class="desc"><button class="example" lang="lb"><b>Z</b>ënsen</button></div>
 </div>
 <div> 
@@ -225,11 +234,11 @@
     <div class="desc"><button class="example" lang="lb"><b>S</b>ummer</button></div>
 </div>
 <div> 
-    <button class="phoneme">Z</button>
+    <button class="phoneme">Z<span class="ipa-reminder">ʒ</span></button>
     <div class="desc"><button class="example" lang="lb"><b>J</b>uli</button><br><button class="example" lang="lb">le<b>g</b>endär</button></div>
 </div>
 <div>  
-    <button class="phoneme">z\</button>
+    <button class="phoneme">z\<span class="ipa-reminder">ʑ</span></button>
     <div class="desc"><button class="example" lang="lb">déi<b>j</b>éineg</button><br><button class="example" lang="lb">ree<b>g</b>elrecht</button></div>
 </div>
 </div>
@@ -238,7 +247,7 @@
     <h2>Vowels</h2>
 <div class="row">
 <div>
-    <button class="phoneme">A</button>
+    <button class="phoneme">A<span class="ipa-reminder">ɑ</span></button>
     <div class="desc"><button class="example" lang="lb">h<b>a</b>fteg</button><br><button class="example" lang="lb">K<b>a</b>ch</button></div>
 </div>
 <div>
@@ -246,19 +255,19 @@
     <div class="desc"><button class="example" lang="lb">H<b>aa</b>ssel</button><br><button class="example" lang="lb">K<b>a</b>p</button></div>
 </div>
 <div>
-    <button class="phoneme">a~</button> 
+    <button class="phoneme">a~<span class="ipa-reminder">ã</span></button> 
     <div class="desc"><button class="example" lang="lb">Ch<b>an</b>ce</button></div>
 </div>
 <div>
-    <button class="phoneme">{</button>
+    <button class="phoneme">{<span class="ipa-reminder">æ</span></button>
     <div class="desc"><button class="example" lang="lb">H<b>e</b>lzen</button><br><button class="example" lang="lb"><b>e</b>ng</button><br><button class="example" lang="lb">H<b>ä</b>ff</button></div>
 </div>
 <div>
-    <button class="phoneme">@</button>
+    <button class="phoneme">@<span class="ipa-reminder">ə</span></button>
     <div class="desc"><button class="example" lang="lb">H<b>ë</b>lzer</button><br><button class="example" lang="lb">Drog<b>e</b>n</button></div>
 </div>
 <div>
-    <button class="phoneme">6</button>
+    <button class="phoneme">6<span class="ipa-reminder">ɐ</span></button>
     <div class="desc"><button class="example" lang="lb">sau<b>er</b></button></div>
 </div>
 <div>
@@ -266,7 +275,7 @@
     <div class="desc"><button class="example" lang="lb">Br<b>é</b>cken</button><br><button class="example" lang="lb">n<b>é</b>ng</button></div>
 </div>
 <div> 
-    <button class="phoneme">E:</button>
+    <button class="phoneme">E:<span class="ipa-reminder">ɛː</span></button>
     <div class="desc"><button class="example" lang="lb"><b>ä</b>r</button><br><button class="example" lang="lb">n<b>ä</b>mlech</button></div>
 </div>
 <div>
@@ -274,7 +283,7 @@
     <div class="desc"><button class="example" lang="lb">h<b>ee</b>feg</button><br><button class="example" lang="lb">K<b>ee</b>ser</button></div>
 </div>
 <div>
-    <button class="phoneme">E~</button>
+    <button class="phoneme">E~<span class="ipa-reminder">ɛ̃</span></button>
     <div class="desc"><button class="example" lang="lb">D<b>in</b>de</button></div>
 </div>
 <div>
@@ -290,7 +299,7 @@
     <div class="desc"><button class="example" lang="lb">H<b>o</b>lztem</button></div>
 </div>
 <div> 
-    <button class="phoneme">O</button>
+    <button class="phoneme">O<span class="ipa-reminder">ɔ</span></button>
     <div class="desc"><button class="example" lang="lb">C<b>omp</b>toir</button></div>
 </div>
 <div>
@@ -315,51 +324,51 @@
 <h2>Diphtongs</h2>
 <div class="row">
 <div>
-    <button class="phoneme">{:I</button>
+    <button class="phoneme">{:I<span class="ipa-reminder">æːɪ</span></button>
     <div class="desc"><button class="example" lang="lb">r<b>äi</b>ch</button></div>
 </div>
 <div>
-    <button class="phoneme">{:U</button>
+    <button class="phoneme">{:U<span class="ipa-reminder">æːʊ</span></button>
     <div class="desc"><button class="example" lang="lb">r<b>au</b></button></div>
 </div>
 <div>
-    <button class="phoneme">AI</button>
+    <button class="phoneme">AI<span class="ipa-reminder">ɑɪ</span></button>
     <div class="desc"><button class="example" lang="lb">h<b>ai</b>teg</button></div>
 </div>
 <div>
-    <button class="phoneme">AU</button>
+    <button class="phoneme">AU<span class="ipa-reminder">ɑʊ</span></button>
     <div class="desc"><button class="example" lang="lb">Schr<b>au</b>f</button></div>
 </div>
 <div>
-    <button class="phoneme">3I</button>
+    <button class="phoneme">3I<span class="ipa-reminder">ɜɪ</span></button>
     <div class="desc"><button class="example" lang="lb">er<b>éi</b>scht</button></div>
 </div>
 <div> 
-    <button class="phoneme">eI</button>
+    <button class="phoneme">eI<span class="ipa-reminder">eɪ</span></button>
     <div class="desc"><button class="example">F<b>a</b>cebook</button></div>
 </div>
 <div> 
-    <button class="phoneme">i@</button>
+    <button class="phoneme">i@<span class="ipa-reminder">iə</span></button>
     <div class="desc"><button class="example" lang="lb">H<b>ie</b>lem</button><br><button class="example" lang="lb">B<b>ier</b>gem</button></div>
 </div>
 <div> 
-    <button class="phoneme">6_k</button>
+    <button class="phoneme">6_k<span class="ipa-reminder">ɐ̰</span></button>
     <div class="desc"><button class="example" lang="lb">Xav<b>ier</b></button></div>
 </div>
 <div>
-    <button class="phoneme">oI</button>
+    <button class="phoneme">oI<span class="ipa-reminder">oɪ</span></button>
     <div class="desc"><button class="example" lang="lb">Abent<b>eu</b>er</button></div>
 </div>
 <div> 
-    <button class="phoneme">oU</button>
+    <button class="phoneme">oU<span class="ipa-reminder">oʊ</span></button>
     <div class="desc"><button class="example" lang="lb">h<b>ou</b>er</button><br><button class="example" lang="lb">d<b>ou</b>dvoll</button></div>
 </div>
 <div>
-    <button class="phoneme">@U</button>
+    <button class="phoneme">@U<span class="ipa-reminder">əʊ</span></button>
     <div class="desc"><button class="example" lang="lb">Direkti<b>ou</b>n</button></div>
 </div>
 <div> 
-    <button class="phoneme">u@</button>
+    <button class="phoneme">u@<span class="ipa-reminder">uə</span></button>
     <div class="desc"><button class="example" lang="lb">h<b>ue</b>l</button><br><button class="example" lang="lb">Lëtzeb<b>uer</b>g</button></div>
 </div> 
 </div>
