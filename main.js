@@ -313,7 +313,13 @@ async function getLodIpa(id) {
     }
 }
 
-async function clipboard(text) {
+async function clipboard(xsampa, word) {
+    let text = ''
+    if (word && word.length !== 0) {
+        text = `${word}:[${xsampa}]`
+    } else {
+        text = xsampa
+    }
     await navigator.clipboard.writeText(text)
 }
 
