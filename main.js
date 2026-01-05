@@ -260,7 +260,7 @@ function speak(word) {
 
         const voices = window.speechSynthesis.getVoices();
         const preferredVoice = voices.find(voice =>
-            voice.lang == 'lb-LU' && voice.name == window.voice
+            voice.lang == 'lb-LU' && voice.name.startsWith(window.voice)
         );
 
         if (preferredVoice) {
@@ -345,11 +345,21 @@ function load() {
         })
         Array.from(document.querySelectorAll('.panel button.phoneme')).forEach(e => {
             e.addEventListener('click', event => {
+                let phonem = event.target.id
+                if (event.target.id === undefined) {
+                    phonem = event.target.parentNode.id
+                }
                 const textarea = document.querySelector('#phonetic-transcription')
-                textarea.value = textarea.value + event.target.textContent
+                textarea.value = textarea.value + phonem.replace(/\\\\/g, '\\')
             })
             e.addEventListener('mouseover', event => {
-                const phonem = event.target.textContent.trim()
+                let phonem = event.target.id
+                if (event.target.id === undefined) {
+                    phonem = event.target.parentNode.id
+                }
+                phonem = phonem.replace(/\\\\/g, '\\')
+
+                console.log(phonem)
                 const mp3 = `sounds/${window.voice.toLowerCase()}/${mapping[phonem]}.mp3`
                 const player = document.querySelector('#audioPlayer')
                 player.setAttribute('src', mp3)
