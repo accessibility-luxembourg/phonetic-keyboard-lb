@@ -323,36 +323,75 @@ async function clipboard(xsampa, word) {
     await navigator.clipboard.writeText(text)
 }
 
-function load() {
-    document.addEventListener('DOMContentLoaded', () => {
-        window.voice = document.getElementById('voice').value
-        if (!lbVoicesAvailable()) {
-            document.getElementById('speak-word').style.display = 'none'
-        } else {
-            document.getElementById('speak-word').addEventListener('click', e => {
-                speak(document.getElementById('word').value.trim())
-            })
-        }
-        document.getElementById('lod-search').addEventListener('click', e => {
-            lodSearch(document.getElementById('word').value.trim())
+function loadKbd() {
+    const voice = (document.getElementById('voice') !== null)? document.getElementById('voice').value:'Mil'
+    window.voice = voice
+    if (!lbVoicesAvailable()) {
+        document.getElementById('speak-word').style.display = 'none'
+    } else {
+        document.getElementById('speak-word').addEventListener('click', e => {
+            speak(document.getElementById('word').value.trim())
         })
-        document.getElementById('clipboard').addEventListener('click', e => {
-            clipboard(document.getElementById('phonetic-transcription').value.trim(), document.getElementById('word').value.trim())
+    }
+    document.getElementById('lod-search').addEventListener('click', e => {
+        lodSearch(document.getElementById('word').value.trim())
+    })
+    document.getElementById('clipboard').addEventListener('click', e => {
+        clipboard(document.getElementById('phonetic-transcription').value.trim(), document.getElementById('word').value.trim())
+    })
+    document.getElementById('clear').addEventListener('click', e => {
+        document.getElementById('phonetic-transcription').value = ''
+        document.getElementById('word').value = ''
+    })
+    Array.from(document.querySelectorAll('.panel button.phoneme')).forEach(e => {
+        e.addEventListener('click', event => {
+            let phonem = event.target.id
+            if (event.target.id === undefined) {
+                phonem = event.target.parentNode.id
+            }
+            const textarea = document.querySelector('#phonetic-transcription')
+            textarea.value = textarea.value + phonem.replace(/\\\\/g, '\\')
         })
-        document.getElementById('clear').addEventListener('click', e => {
-            document.getElementById('phonetic-transcription').value = ''
-            document.getElementById('word').value = ''
+        e.addEventListener('mouseover', event => {
+            let phonem = event.target.id
+            if (event.target.id === undefined) {
+                phonem = event.target.parentNode.id
+            }
+            phonem = phonem.replace(/\\\\/g, '\\')
+
+            console.log(phonem)
+            const mp3 = `sounds/${window.voice.toLowerCase()}/${mapping[phonem]}.mp3`
+            const player = document.querySelector('#audioPlayer')
+            player.setAttribute('src', mp3)
+            player.play()
         })
-        Array.from(document.querySelectorAll('.panel button.phoneme')).forEach(e => {
+    })
+    Array.from(document.querySelectorAll('.panel button.example')).forEach(e => {
+        e.addEventListener('click', event => {
+            target = event.target
+            if (target.nodeName !== 'BUTTON') {
+                target = target.parentNode
+            }
+            const example = target.textContent.trim()
+            console.log(example)
+            const mp3 = examples[example]
+            console.log(mp3)
+            const player = document.querySelector('#audioPlayer')
+            player.setAttribute('src', mp3)
+            player.play()                
+        })
+    })
+    if (document.getElementById('voice')) {
+        document.getElementById('voice').addEventListener('change', e => {
+            window.voice = e.target.value
+        })
+    }
+}
+
+function loadSimple() {
+        window.voice = "Mil"
+       Array.from(document.querySelectorAll('.panel button.phoneme')).forEach(e => {
             e.addEventListener('click', event => {
-                let phonem = event.target.id
-                if (event.target.id === undefined) {
-                    phonem = event.target.parentNode.id
-                }
-                const textarea = document.querySelector('#phonetic-transcription')
-                textarea.value = textarea.value + phonem.replace(/\\\\/g, '\\')
-            })
-            e.addEventListener('mouseover', event => {
                 let phonem = event.target.id
                 if (event.target.id === undefined) {
                     phonem = event.target.parentNode.id
@@ -381,10 +420,21 @@ function load() {
                 player.play()                
             })
         })
-        document.getElementById('voice').addEventListener('change', e => {
-            window.voice = e.target.value
-        })
+}
 
+function getFileFromURL() {
+    let path = window.location.pathname;
+    let fileName = path.substring(path.lastIndexOf('/') + 1);
+    return fileName;
+}
+
+function load() {
+    document.addEventListener('DOMContentLoaded', () => {
+        if (getFileFromURL() === 'xsampa.html') {
+            loadSimple()
+        } else {
+            loadKbd()
+        }
     })
 }
 
