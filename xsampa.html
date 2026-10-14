@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="lb">
     <head>
         <meta charset="utf-8">
-        <title>X-SAMPA Luxembourgish</title>
+        <title>X-SAMPA fir Lëtzebuergesch</title>
         <style>
             .row {
                 display: flex;
@@ -23,7 +24,6 @@
                 cursor: pointer;
             }
 
-
             button.shortcut {
                 padding: 5px;
             }
@@ -36,8 +36,8 @@
             input {
                 font-size: 1.2em;
                 font-weight: 700;
-                font-family: 'Courier New', monospace; 
-                margin: 5px;               
+                font-family: 'Courier New', monospace;
+                margin: 5px;
             }
 
             .desc {
@@ -53,278 +53,543 @@
             h2 {
                 margin: 0;
             }
-
-
-
         </style>
         <script src="main.js"></script>
     </head>
     <body>
-        <h1>X-SAMPA for Luxembourgish</h1>
+        <h1>X-SAMPA fir Lëtzebuergesch</h1>
         <audio id="audioPlayer"></audio>
 
+        <div class="panel">
+            <h2>Konsonanten</h2>
+            <ul class="row">
+                <li>
+                    <p>b</p>
+                    <button class="phoneme" id="b">b ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb" data-url=""><b>B</b>eeler</button>
+                    </div>
+                </li>
+                <li>
+                    <p>d</p>
+                    <button class="phoneme" id="d">d ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>d</b>eenen</button>
+                    </div>
+                </li>
+                <li>
+                    <p>D</p>
+                    <button class="phoneme" id="D">D ofspillen</button>
+                </li>
+                <li>
+                    <p>d_Z</p>
+                    <button class="phoneme" id="d_Z">d_Z ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>J</b>eans</button><br>
+                        <button class="example" lang="lb"><b>Dsch</b>ibuti</button><br>
+                        <button class="example" lang="lb">A<b>dj</b>ektiv</button>
+                    </div>
+                </li>
+                <li>
+                    <p>dz</p>
+                    <button class="phoneme" id="dz">dz ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">spa<b>ds</b>éieren</button>
+                    </div>
+                </li>
+                <li>
+                    <p>f</p>
+                    <button class="phoneme" id="f">f ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>f</b>eelen</button>
+                    </div>
+                </li>
+                <li>
+                    <p>g</p>
+                    <button class="phoneme" id="g">g ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>g</b>e<b>g</b>ranzt</button>
+                    </div>
+                </li>
+                <li>
+                    <p>h</p>
+                    <button class="phoneme" id="h">h ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>h</b>eelen</button><br>
+                        <button class="example" lang="lb">do<b>h</b>eem</button>
+                    </div>
+                </li>
+                <li>
+                    <p>j</p>
+                    <button class="phoneme" id="j">j ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>J</b>emen</button><br>
+                        <button class="example" lang="lb">t<b>j</b>a</button><br>
+                        <button class="example" lang="lb">Lëtzebuer<b>g</b>esch</button>
+                    </div>
+                </li>
+                <li>
+                    <p>k</p>
+                    <button class="phoneme" id="k">k ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>K</b>eelen</button><br>
+                        <button class="example" lang="lb">se<b>ch</b>s</button>
+                    </div>
+                </li>
+                <li>
+                    <p>l</p>
+                    <button class="phoneme" id="l">l ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>L</b>eetem</button><br>
+                        <button class="example" lang="lb">k<b>l</b>eesper</button>
+                    </div>
+                </li>
+                <li>
+                    <p>m</p>
+                    <button class="phoneme" id="m">m ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>m</b>eeschten</button>
+                    </div>
+                </li>
+                <li>
+                    <p>n</p>
+                    <button class="phoneme" id="n">n ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">o<b>n</b>ee<b>n</b>s</button>
+                    </div>
+                </li>
+                <li>
+                    <p>N</p>
+                    <button class="phoneme" id="N">N ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">de<b>ng</b>en</button>
+                    </div>
+                </li>
+                <li>
+                    <p>p</p>
+                    <button class="phoneme" id="p">p ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>p</b>ii<b>p</b>seg</button><br>
+                        <button class="example" lang="lb">o<b>b</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>R</p>
+                    <button class="phoneme" id="R">R ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">da<b>g</b>siwwer</button>
+                    </div>
+                </li>
+                <li>
+                    <p>R\</p>
+                    <button class="phoneme" id="R\\">R\ ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>r</b>eeneg</button><br>
+                        <button class="example" lang="lb">Comptoi<b>r</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>s</p>
+                    <button class="phoneme" id="s">s ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">ru<b>ss</b>esch</button><br>
+                        <button class="example" lang="lb">hai<b>s</b>lech</button>
+                    </div>
+                </li>
+                <li>
+                    <p>S</p>
+                    <button class="phoneme" id="S">S ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>Sch</b>eedgen</button><br>
+                        <button class="example" lang="lb"><b>s</b>tréieg</button>
+                    </div>
+                </li>
+                <li>
+                    <p>s\</p>
+                    <button class="phoneme" id="s\\">s\ ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">Ee<b>ch</b>en</button><br>
+                        <button class="example" lang="lb">bewee<b>g</b>le<b>ch</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>t</p>
+                    <button class="phoneme" id="t">t ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>T</b>ënten</button><br>
+                        <button class="example" lang="lb">fa<b>d</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>T</p>
+                    <button class="phoneme" id="T">T ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">wi<b>th</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>t_s</p>
+                    <button class="phoneme" id="t_s">t_s ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>Z</b>ënsen</button>
+                    </div>
+                </li>
+                <li>
+                    <p>v</p>
+                    <button class="phoneme" id="v">v ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>w</b>oubäi</button>
+                    </div>
+                </li>
+                <li>
+                    <p>w</p>
+                    <button class="phoneme" id="w">w ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">z<b>w</b>ee</button><br>
+                        <button class="example" lang="lb">q<b>u</b>eesch</button>
+                    </div>
+                </li>
+                <li>
+                    <p>x</p>
+                    <button class="phoneme" id="x">x ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">Ku<b>ch</b>en</button><br>
+                        <button class="example" lang="lb">Da<b>g</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>z</p>
+                    <button class="phoneme" id="z">z ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>S</b>ummer</button>
+                    </div>
+                </li>
+                <li>
+                    <p>Z</p>
+                    <button class="phoneme" id="Z">Z ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>J</b>uli</button><br>
+                        <button class="example" lang="lb">le<b>g</b>endär</button>
+                    </div>
+                </li>
+                <li>
+                    <p>z\</p>
+                    <button class="phoneme" id="z\\">z\ ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">déi<b>j</b>éineg</button><br>
+                        <button class="example" lang="lb">ree<b>g</b>elrecht</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-<div class="panel">
-    <h2>Consonants</h2>
-<ul class="row">
-<li>
-    <p>b</p><button class="phoneme" id="b">Play b</button>
-    <p>Examples:</p><div class="desc">
-        <button class="example" lang="lb" data-url=""><b>B</b>eeler</button>
-    </div>
-</li>
-<li>
-    <p>d</p><button class="phoneme" id="d">Play d</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>d</b>eenen</button></div>
-</li>
-<li>
-    <p>D</p><button class="phoneme" id="D">Play D</button>
-    <p>Examples:</p><div class="desc"></div>
-</li>
-<li>
-    <p>d_Z</p><button class="phoneme" id="d_Z">Play d_Z</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>J</b>eans</button><br><button class="example" lang="lb"><b>Dsch</b>ibuti</button><br><button class="example" lang="lb">A<b>dj</b>ektiv</button></div>
-</li>
-<li>  
-    <p>dz</p><button class="phoneme" id="dz">Play dz</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">spa<b>ds</b>éieren</button></div>
-</li>
-<li> 
-    <p>f</p><button class="phoneme" id="f">Play f</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>f</b>eelen</button></div>
-</li>
-<li>
-    <p>g</p><button class="phoneme" id="g">Play g</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>g</b>e<b>g</b>ranzt</button></div>
-</li>
-<li> 
-    <p>h</p><button class="phoneme" id="h">Play h</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>h</b>eelen</button><br><button class="example" lang="lb">do<b>h</b>eem</button></div>
-</li>
-<li>
-    <p>j</p><button class="phoneme" id="j">Play j</button> 
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>J</b>emen</button><br><button class="example" lang="lb">t<b>j</b>a</button><br><button class="example" lang="lb">Lëtzebuer<b>g</b>esch</button></div>
-</li>
-<li>
-    <p>k</p><button class="phoneme" id="k">Play k</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>K</b>eelen</button><br><button class="example" lang="lb">se<b>ch</b>s</button></div>
-</li>
-<li> 
-    <p>l</p><button class="phoneme" id="l">Play l</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>L</b>eetem</button><br><button class="example" lang="lb">k<b>l</b>eesper</button></div>
-</li>
-<li> 
-    <p>m</p><button class="phoneme" id="m">Play m</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>m</b>eeschten</button></div>
-</li>
-<li> 
-    <p>n</p><button class="phoneme" id="n">Play n</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">o<b>n</b>ee<b>n</b>s</button></div>
-</li>
-<li> 
-    <p>N</p><button class="phoneme" id="N">Play N</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">de<b>ng</b>en</button></div>
-</li>
-<li> 
-    <p>p</p><button class="phoneme" id="p">Play p</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>p</b>ii<b>p</b>seg</button><br><button class="example" lang="lb">o<b>b</b></button></div>
-</li>
-<li> 
-    <p>R</p><button class="phoneme" id="R">Play R</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">da<b>g</b>siwwer</button></div>
-</li>
-<li> 
-    <p>R\</p><button class="phoneme" id="R\\">Play R\</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>r</b>eeneg</button><br><button class="example" lang="lb">Comptoi<b>r</b></button></div>
-</li>
-<li> 
-    <p>s</p><button class="phoneme" id="s">Play s</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">ru<b>ss</b>esch</button><br><button class="example" lang="lb">hai<b>s</b>lech</button></div>
-</li>
-<li> 
-    <p>S</p><button class="phoneme" id="S">Play S</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>Sch</b>eedgen</button><br><button class="example" lang="lb"><b>s</b>tréieg</button></div>
-</li>
-<li> 
-    <p>s\</p><button class="phoneme" id="s\\">Play s\</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">Ee<b>ch</b>en</button><br><button class="example" lang="lb">bewee<b>g</b>le<b>ch</b></button></div>
-</li>
-<li> 
-    <p>t</p><button class="phoneme" id="t">Play t</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>T</b>ënten</button><br><button class="example" lang="lb">fa<b>d</b></button></div>
-</li>
-<li> 
-    <p>T</p><button class="phoneme" id="T">Play T</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">wi<b>th</b></button></div>
-</li>
-<li> 
-    <p>t_s</p><button class="phoneme" id="t_s">Play t_s</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>Z</b>ënsen</button></div>
-</li>
-<li> 
-    <p>v</p><button class="phoneme" id="v">Play v</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>w</b>oubäi</button></div>
-</li>
-<li> 
-    <p>w</p><button class="phoneme" id="w">Play w</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">z<b>w</b>ee</button><br><button class="example" lang="lb">q<b>u</b>eesch</button></div>
-</li>
-<li> 
-    <p>x</p><button class="phoneme" id="x">Play x</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">Ku<b>ch</b>en</button><br><button class="example" lang="lb">Da<b>g</b></button></div>
-</li>
-<li> 
-    <p>z</p><button class="phoneme" id="z">Play z</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>S</b>ummer</button></div>
-</li>
-<li> 
-    <p>Z</p><button class="phoneme" id="Z">Play Z</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>J</b>uli</button><br><button class="example" lang="lb">le<b>g</b>endär</button></div>
-</li>
-<li>  
-    <p>z\</p><button class="phoneme" id="z\\">Play z\</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">déi<b>j</b>éineg</button><br><button class="example" lang="lb">ree<b>g</b>elrecht</button></div>
-</li>
-</ul>
-</div>
-<div class="panel">
-    <h2>Vowels</h2>
-<ul class="row">
-<li>
-    <p>A</p><button class="phoneme" id="A">Play A</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">h<b>a</b>fteg</button><br><button class="example" lang="lb">K<b>a</b>ch</button></div>
-</li>
-<li>
-    <p>a:</p><button class="phoneme" id="a:">Play a:</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">H<b>aa</b>ssel</button><br><button class="example" lang="lb">K<b>a</b>p</button></div>
-</li>
-<li>
-    <p>a~</p><button class="phoneme" id="a~">Play a~</button> 
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">Ch<b>an</b>ce</button></div>
-</li>
-<li>
-    <p>{</p><button class="phoneme" id="{">Play {</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">H<b>e</b>lzen</button><br><button class="example" lang="lb"><b>e</b>ng</button><br><button class="example" lang="lb">H<b>ä</b>ff</button></div>
-</li>
-<li>
-    <p>@</p><button class="phoneme" id="@">Play @</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">H<b>ë</b>lzer</button><br><button class="example" lang="lb">Drog<b>e</b>n</button></div>
-</li>
-<li>
-    <p>6</p><button class="phoneme" id="6">Play 6</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">sau<b>er</b></button></div>
-</li>
-<li>
-    <p>e</p><button class="phoneme" id="e">Play e</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">Br<b>é</b>cken</button><br><button class="example" lang="lb">n<b>é</b>ng</button></div>
-</li>
-<li> 
-    <p>E:</p><button class="phoneme" id="E:">Play E:</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>ä</b>r</button><br><button class="example" lang="lb">n<b>ä</b>mlech</button></div>
-</li>
-<li>
-    <p>e:</p><button class="phoneme" id="e:">Play e:</button> 
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">h<b>ee</b>feg</button><br><button class="example" lang="lb">K<b>ee</b>ser</button></div>
-</li>
-<li>
-    <p>E~</p><button class="phoneme" id="E~">Play E~</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">D<b>in</b>de</button></div>
-</li>
-<li>
-    <p>i</p><button class="phoneme" id="i">Play i</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">h<b>i</b>wweleg</button></div>
-</li>
-<li> 
-    <p>i:</p><button class="phoneme" id="i:">Play i:</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">s<b>i</b>wen</button><br><button class="example" lang="lb">helll<b>ii</b>cht</button></div>
-</li>
-<li> 
-    <p>o</p><button class="phoneme" id="o">Play o</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">H<b>o</b>lztem</button></div>
-</li>
-<li> 
-    <p>O</p><button class="phoneme" id="O">Play O</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">C<b>omp</b>toir</button></div>
-</li>
-<li>
-    <p>o:</p><button class="phoneme" id="o:">Play o:</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">Spr<b>oo</b>ch</button><br><button class="example" lang="lb">n<b>o</b></button></div>
-</li>
-<li> 
-    <p>u</p><button class="phoneme" id="u">Play u</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">h<b>u</b>sch</button></div>
-</li>
-<li> 
-    <p>u:</p><button class="phoneme" id="u:">Play u:</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">T<b>u</b>t</button><br><button class="example" lang="lb">k<b>uu</b>schteg</button></div>
-</li>
-<li>
-    <p>y</p><button class="phoneme" id="y">Play y</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb"><b>ü</b>ppeg</button></div>
-</li>
-</ul>
-</div>
-<div class="panel">
-<h2>Diphtongs</h2>
-<ul class="row">
-<li>
-    <p>{:I</p><button class="phoneme" id="{:I">Play {:I</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">r<b>äi</b>ch</button></div>
-</li>
-<li>
-    <p>{:U</p><button class="phoneme" id="{:U">Play {:U</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">r<b>au</b></button></div>
-</li>
-<li>
-    <p>AI</p><button class="phoneme" id="AI">Play AI</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">h<b>ai</b>teg</button></div>
-</li>
-<li>
-    <p>AU</p><button class="phoneme" id="AU">Play AU</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">Schr<b>au</b>f</button></div>
-</li>
-<li>
-    <p>3I</p><button class="phoneme" id="3I">Play 3I</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">er<b>éi</b>scht</button></div>
-</li>
-<li> 
-    <p>eI</p><button class="phoneme" id="eI">Play eI</button>
-    <p>Examples:</p><div class="desc"><button class="example">F<b>a</b>cebook</button></div>
-</li>
-<li> 
-    <p>i@</p><button class="phoneme" id="i@">Play i@</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">H<b>ie</b>lem</button><br><button class="example" lang="lb">B<b>ier</b>gem</button></div>
-</li>
-<li> 
-    <p>6_k</p><button class="phoneme" id="6_k">Play 6_k</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">Xav<b>ier</b></button></div>
-</li>
-<li>
-    <p>oI</p><button class="phoneme" id="oI">Play oI</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">Abent<b>eu</b>er</button></div>
-</li>
-<li> 
-    <p>oU</p><button class="phoneme" id="oU">Play oU</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">d<b>ou</b>dvoll</button></div>
-</li>
-<li>
-    <p>@U</p><button class="phoneme" id="@U">Play @U</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">Direkti<b>ou</b>n</button></div>
-</li>
-<li> 
-    <p>u@</p><button class="phoneme" id="u@">Play u@</button>
-    <p>Examples:</p><div class="desc"><button class="example" lang="lb">h<b>ue</b>l</button><br><button class="example" lang="lb">Lëtzeb<b>uer</b>g</button></div>
-</li> 
-</ul>
-</div>
-<div class="panel">
+        <div class="panel">
+            <h2>Vokaler</h2>
+            <ul class="row">
+                <li>
+                    <p>A</p>
+                    <button class="phoneme" id="A">A ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">h<b>a</b>fteg</button><br>
+                        <button class="example" lang="lb">K<b>a</b>ch</button>
+                    </div>
+                </li>
+                <li>
+                    <p>a:</p>
+                    <button class="phoneme" id="a:">a: ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">H<b>aa</b>ssel</button><br>
+                        <button class="example" lang="lb">K<b>a</b>p</button>
+                    </div>
+                </li>
+                <li>
+                    <p>a~</p>
+                    <button class="phoneme" id="a~">a~ ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">Ch<b>an</b>ce</button>
+                    </div>
+                </li>
+                <li>
+                    <p>{</p>
+                    <button class="phoneme" id="{">{ ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">H<b>e</b>lzen</button><br>
+                        <button class="example" lang="lb"><b>e</b>ng</button><br>
+                        <button class="example" lang="lb">H<b>ä</b>ff</button>
+                    </div>
+                </li>
+                <li>
+                    <p>@</p>
+                    <button class="phoneme" id="@">@ ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">H<b>ë</b>lzer</button><br>
+                        <button class="example" lang="lb">Drog<b>e</b>n</button>
+                    </div>
+                </li>
+                <li>
+                    <p>6</p>
+                    <button class="phoneme" id="6">6 ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">sau<b>er</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>e</p>
+                    <button class="phoneme" id="e">e ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">Br<b>é</b>cken</button><br>
+                        <button class="example" lang="lb">n<b>é</b>ng</button>
+                    </div>
+                </li>
+                <li>
+                    <p>E:</p>
+                    <button class="phoneme" id="E:">E: ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>ä</b>r</button><br>
+                        <button class="example" lang="lb">n<b>ä</b>mlech</button>
+                    </div>
+                </li>
+                <li>
+                    <p>e:</p>
+                    <button class="phoneme" id="e:">e: ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">h<b>ee</b>feg</button><br>
+                        <button class="example" lang="lb">K<b>ee</b>ser</button>
+                    </div>
+                </li>
+                <li>
+                    <p>E~</p>
+                    <button class="phoneme" id="E~">E~ ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">D<b>in</b>de</button>
+                    </div>
+                </li>
+                <li>
+                    <p>i</p>
+                    <button class="phoneme" id="i">i ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">h<b>i</b>wweleg</button>
+                    </div>
+                </li>
+                <li>
+                    <p>i:</p>
+                    <button class="phoneme" id="i:">i: ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">s<b>i</b>wen</button><br>
+                        <button class="example" lang="lb">helll<b>ii</b>cht</button>
+                    </div>
+                </li>
+                <li>
+                    <p>o</p>
+                    <button class="phoneme" id="o">o ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">H<b>o</b>lztem</button>
+                    </div>
+                </li>
+                <li>
+                    <p>O</p>
+                    <button class="phoneme" id="O">O ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">C<b>omp</b>toir</button>
+                    </div>
+                </li>
+                <li>
+                    <p>o:</p>
+                    <button class="phoneme" id="o:">o: ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">Spr<b>oo</b>ch</button><br>
+                        <button class="example" lang="lb">n<b>o</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>u</p>
+                    <button class="phoneme" id="u">u ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">h<b>u</b>sch</button>
+                    </div>
+                </li>
+                <li>
+                    <p>u:</p>
+                    <button class="phoneme" id="u:">u: ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">T<b>u</b>t</button><br>
+                        <button class="example" lang="lb">k<b>uu</b>schteg</button>
+                    </div>
+                </li>
+                <li>
+                    <p>y</p>
+                    <button class="phoneme" id="y">y ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb"><b>ü</b>ppeg</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-<h1>Tools</h1>
-<ul>
-    <li><a href="https://www.vulgarlang.com/ipa-x-sampa-cxs-converter/">IPA to X-SAMPA converter</a></li>
-    <li><a href="https://en.wikipedia.org/wiki/Help:IPA/Luxembourgish">IPA/Luxembourgish - Wikipedia (source for most of the examples)</a></li>
-</ul>
- 
-</div>
+        <div class="panel">
+            <h2>Diphthongen</h2>
+            <ul class="row">
+                <li>
+                    <p>{:I</p>
+                    <button class="phoneme" id="{:I">{:I ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">r<b>äi</b>ch</button>
+                    </div>
+                </li>
+                <li>
+                    <p>{:U</p>
+                    <button class="phoneme" id="{:U">{:U ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">r<b>au</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>AI</p>
+                    <button class="phoneme" id="AI">AI ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">h<b>ai</b>teg</button>
+                    </div>
+                </li>
+                <li>
+                    <p>AU</p>
+                    <button class="phoneme" id="AU">AU ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">Schr<b>au</b>f</button>
+                    </div>
+                </li>
+                <li>
+                    <p>3I</p>
+                    <button class="phoneme" id="3I">3I ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">er<b>éi</b>scht</button>
+                    </div>
+                </li>
+                <li>
+                    <p>eI</p>
+                    <button class="phoneme" id="eI">eI ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example">F<b>a</b>cebook</button>
+                    </div>
+                </li>
+                <li>
+                    <p>i@</p>
+                    <button class="phoneme" id="i@">i@ ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">H<b>ie</b>lem</button><br>
+                        <button class="example" lang="lb">B<b>ier</b>gem</button>
+                    </div>
+                </li>
+                <li>
+                    <p>6_k</p>
+                    <button class="phoneme" id="6_k">6_k ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">Xav<b>ier</b></button>
+                    </div>
+                </li>
+                <li>
+                    <p>oI</p>
+                    <button class="phoneme" id="oI">oI ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">Abent<b>eu</b>er</button>
+                    </div>
+                </li>
+                <li>
+                    <p>oU</p>
+                    <button class="phoneme" id="oU">oU ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">d<b>ou</b>dvoll</button>
+                    </div>
+                </li>
+                <li>
+                    <p>@U</p>
+                    <button class="phoneme" id="@U">@U ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">Direkti<b>ou</b>n</button>
+                    </div>
+                </li>
+                <li>
+                    <p>u@</p>
+                    <button class="phoneme" id="u@">u@ ofspillen</button>
+                    <p>Beispiller:</p>
+                    <div class="desc">
+                        <button class="example" lang="lb">h<b>ue</b>l</button><br>
+                        <button class="example" lang="lb">Lëtzeb<b>uer</b>g</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel">
+            <h2>Hëllefsmëttel</h2>
+            <ul>
+                <li>
+                    <a href="https://www.vulgarlang.com/ipa-x-sampa-cxs-converter/">
+                        IPA-an-X-SAMPA-Konverter
+                    </a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Help:IPA/Luxembourgish">
+                        IPA/Lëtzebuergesch – Wikipedia (Quell fir déi meescht Beispiller)
+                    </a>
+                </li>
+            </ul>
+        </div>
     </body>
 </html>
