@@ -135,7 +135,6 @@ const examples = {
     "rau": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8e/Lb-rau.ogg/Lb-rau.ogg.mp3",
     "eréischt": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/14/Lb-er%C3%A9ischt.ogg/Lb-er%C3%A9ischt.ogg.mp3",
     "béid": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8d/Lb-b%C3%A9id.ogg/Lb-b%C3%A9id.ogg.mp3",
-    "houer": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/61/Lb-houer.ogg/Lb-houer.ogg.mp3",
     "doudvoll": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a4/Lb-doudvoll.ogg/Lb-doudvoll.ogg.mp3",
     "Hielem": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7c/Lb-Hielem.ogg/Lb-Hielem.ogg.mp3",
     "Biergem": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f9/Lb-Biergem.ogg/Lb-Biergem.ogg.mp3",
