@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="lb">
     <head>
@@ -54,14 +53,15 @@
                 margin: 0;
             }
 
-            .copy-phoneme { margin-left: 4px; padding: 3px 5px; }
+            .phoneme-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+            .copy-phoneme { padding: 3px 5px; }
             .copy-phoneme:focus-visible, .phoneme:focus-visible, .example:focus-visible, a:focus-visible { outline: 3px solid #1a5fb4; outline-offset: 2px; }
             .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
         </style>
         <script src="main.js"></script>
     </head>
     <body>
-        <h1>X-SAMPA fir Lëtzebuergesch</h1>
+        <h1><span aria-hidden="true">X-SAMPA</span><span class="visually-hidden">x-sampa</span> fir Lëtzebuergesch</h1>
         <audio id="audioPlayer"></audio>
         <div id="copy-status" class="visually-hidden" role="status" aria-atomic="true"></div>
 
@@ -70,7 +70,8 @@
             <ul class="row">
                 <li>
                     <p>b</p>
-                    <button class="phoneme" id="b">b ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="b" aria-label="Phonem b kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="b">b ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="b" aria-label="b kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb" data-url=""><b>B</b>eeler</button>
@@ -78,7 +79,8 @@
                 </li>
                 <li>
                     <p>d</p>
-                    <button class="phoneme" id="d">d ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="d" aria-label="Phonem d kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="d">d ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="d" aria-label="d kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>d</b>eenen</button>
@@ -86,11 +88,13 @@
                 </li>
                 <li>
                     <p>D</p>
-                    <button class="phoneme" id="D">D ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="D" aria-label="Phonem D kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="D">D ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="D" aria-label="D kopéieren">Kopéieren</button></div>
                 </li>
                 <li>
                     <p>d_Z</p>
-                    <button class="phoneme" id="d_Z">d_Z ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="d_Z" aria-label="Phonem d_Z kopéieren. Zeeche fir Zeechen: klenge Buschtaf d, ënneschte Stréch, grousse Buschtaf Z">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="d_Z">d_Z ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="d_Z" aria-label="d_Z kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>J</b>eans</button><br>
@@ -100,7 +104,8 @@
                 </li>
                 <li>
                     <p>dz</p>
-                    <button class="phoneme" id="dz">dz ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="dz" aria-label="Phonem dz kopéieren. Zeeche fir Zeechen: klenge Buschtaf d, klenge Buschtaf z">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="dz">dz ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="dz" aria-label="dz kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">spa<b>ds</b>éieren</button>
@@ -108,7 +113,8 @@
                 </li>
                 <li>
                     <p>f</p>
-                    <button class="phoneme" id="f">f ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="f" aria-label="Phonem f kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="f">f ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="f" aria-label="f kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>f</b>eelen</button>
@@ -116,7 +122,8 @@
                 </li>
                 <li>
                     <p>g</p>
-                    <button class="phoneme" id="g">g ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="g" aria-label="Phonem g kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="g">g ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="g" aria-label="g kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>g</b>e<b>g</b>ranzt</button>
@@ -124,7 +131,8 @@
                 </li>
                 <li>
                     <p>h</p>
-                    <button class="phoneme" id="h">h ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="h" aria-label="Phonem h kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="h">h ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="h" aria-label="h kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>h</b>eelen</button><br>
@@ -133,7 +141,8 @@
                 </li>
                 <li>
                     <p>j</p>
-                    <button class="phoneme" id="j">j ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="j" aria-label="Phonem j kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="j">j ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="j" aria-label="j kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>J</b>emen</button><br>
@@ -143,7 +152,8 @@
                 </li>
                 <li>
                     <p>k</p>
-                    <button class="phoneme" id="k">k ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="k" aria-label="Phonem k kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="k">k ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="k" aria-label="k kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>K</b>eelen</button><br>
@@ -152,7 +162,8 @@
                 </li>
                 <li>
                     <p>l</p>
-                    <button class="phoneme" id="l">l ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="l" aria-label="Phonem l kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="l">l ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="l" aria-label="l kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>L</b>eetem</button><br>
@@ -161,7 +172,8 @@
                 </li>
                 <li>
                     <p>m</p>
-                    <button class="phoneme" id="m">m ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="m" aria-label="Phonem m kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="m">m ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="m" aria-label="m kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>m</b>eeschten</button>
@@ -169,7 +181,8 @@
                 </li>
                 <li>
                     <p>n</p>
-                    <button class="phoneme" id="n">n ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="n" aria-label="Phonem n kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="n">n ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="n" aria-label="n kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">o<b>n</b>ee<b>n</b>s</button>
@@ -177,7 +190,8 @@
                 </li>
                 <li>
                     <p>N</p>
-                    <button class="phoneme" id="N">N ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="N" aria-label="Phonem N kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="N">N ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="N" aria-label="N kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">de<b>ng</b>en</button>
@@ -185,7 +199,8 @@
                 </li>
                 <li>
                     <p>p</p>
-                    <button class="phoneme" id="p">p ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="p" aria-label="Phonem p kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="p">p ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="p" aria-label="p kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>p</b>ii<b>p</b>seg</button><br>
@@ -194,7 +209,8 @@
                 </li>
                 <li>
                     <p>R</p>
-                    <button class="phoneme" id="R">R ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="R" aria-label="Phonem R kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="R">R ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="R" aria-label="R kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">da<b>g</b>siwwer</button>
@@ -202,7 +218,8 @@
                 </li>
                 <li>
                     <p>R\</p>
-                    <button class="phoneme" id="R\\">R\ ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="R\" aria-label="Phonem R\ kopéieren. Zeeche fir Zeechen: grousse Buschtaf R, Réckschréigstréch">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="R\\">R\ ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="R\" aria-label="R\ kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>r</b>eeneg</button><br>
@@ -211,7 +228,8 @@
                 </li>
                 <li>
                     <p>s</p>
-                    <button class="phoneme" id="s">s ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="s" aria-label="Phonem s kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="s">s ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="s" aria-label="s kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">ru<b>ss</b>esch</button><br>
@@ -220,7 +238,8 @@
                 </li>
                 <li>
                     <p>S</p>
-                    <button class="phoneme" id="S">S ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="S" aria-label="Phonem S kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="S">S ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="S" aria-label="S kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>Sch</b>eedgen</button><br>
@@ -229,7 +248,8 @@
                 </li>
                 <li>
                     <p>s\</p>
-                    <button class="phoneme" id="s\\">s\ ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="s\" aria-label="Phonem s\ kopéieren. Zeeche fir Zeechen: klenge Buschtaf s, Réckschréigstréch">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="s\\">s\ ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="s\" aria-label="s\ kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">Ee<b>ch</b>en</button><br>
@@ -238,7 +258,8 @@
                 </li>
                 <li>
                     <p>t</p>
-                    <button class="phoneme" id="t">t ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="t" aria-label="Phonem t kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="t">t ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="t" aria-label="t kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>T</b>ënten</button><br>
@@ -247,7 +268,8 @@
                 </li>
                 <li>
                     <p>T</p>
-                    <button class="phoneme" id="T">T ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="T" aria-label="Phonem T kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="T">T ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="T" aria-label="T kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">wi<b>th</b></button>
@@ -255,7 +277,8 @@
                 </li>
                 <li>
                     <p>t_s</p>
-                    <button class="phoneme" id="t_s">t_s ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="t_s" aria-label="Phonem t_s kopéieren. Zeeche fir Zeechen: klenge Buschtaf t, ënneschte Stréch, klenge Buschtaf s">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="t_s">t_s ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="t_s" aria-label="t_s kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>Z</b>ënsen</button>
@@ -263,7 +286,8 @@
                 </li>
                 <li>
                     <p>v</p>
-                    <button class="phoneme" id="v">v ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="v" aria-label="Phonem v kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="v">v ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="v" aria-label="v kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>w</b>oubäi</button>
@@ -271,7 +295,8 @@
                 </li>
                 <li>
                     <p>w</p>
-                    <button class="phoneme" id="w">w ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="w" aria-label="Phonem w kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="w">w ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="w" aria-label="w kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">z<b>w</b>ee</button><br>
@@ -280,7 +305,8 @@
                 </li>
                 <li>
                     <p>x</p>
-                    <button class="phoneme" id="x">x ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="x" aria-label="Phonem x kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="x">x ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="x" aria-label="x kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">Ku<b>ch</b>en</button><br>
@@ -289,7 +315,8 @@
                 </li>
                 <li>
                     <p>z</p>
-                    <button class="phoneme" id="z">z ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="z" aria-label="Phonem z kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="z">z ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="z" aria-label="z kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>S</b>ummer</button>
@@ -297,7 +324,8 @@
                 </li>
                 <li>
                     <p>Z</p>
-                    <button class="phoneme" id="Z">Z ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="Z" aria-label="Phonem Z kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="Z">Z ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="Z" aria-label="Z kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>J</b>uli</button><br>
@@ -306,7 +334,8 @@
                 </li>
                 <li>
                     <p>z\</p>
-                    <button class="phoneme" id="z\\">z\ ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="z\" aria-label="Phonem z\ kopéieren. Zeeche fir Zeechen: klenge Buschtaf z, Réckschréigstréch">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="z\\">z\ ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="z\" aria-label="z\ kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">déi<b>j</b>éineg</button><br>
@@ -321,7 +350,8 @@
             <ul class="row">
                 <li>
                     <p>A</p>
-                    <button class="phoneme" id="A">A ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="A" aria-label="Phonem A kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="A">A ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="A" aria-label="A kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">h<b>a</b>fteg</button><br>
@@ -330,7 +360,8 @@
                 </li>
                 <li>
                     <p>a:</p>
-                    <button class="phoneme" id="a:">a: ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="a:" aria-label="Phonem a: kopéieren. Zeeche fir Zeechen: klenge Buschtaf a, Duebelpunkt">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="a:">a: ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="a:" aria-label="a: kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">H<b>aa</b>ssel</button><br>
@@ -339,7 +370,8 @@
                 </li>
                 <li>
                     <p>a~</p>
-                    <button class="phoneme" id="a~">a~ ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="a~" aria-label="Phonem a~ kopéieren. Zeeche fir Zeechen: klenge Buschtaf a, Tilde">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="a~">a~ ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="a~" aria-label="a~ kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">Ch<b>an</b>ce</button>
@@ -347,7 +379,8 @@
                 </li>
                 <li>
                     <p>{</p>
-                    <button class="phoneme" id="{">{ ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="{" aria-label="Phonem { kopéieren. Zeeche fir Zeechen: oppe geschwonge Klammer">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="{">{ ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="{" aria-label="{ kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">H<b>e</b>lzen</button><br>
@@ -357,7 +390,8 @@
                 </li>
                 <li>
                     <p>@</p>
-                    <button class="phoneme" id="@">@ ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="@" aria-label="Phonem @ kopéieren. Zeeche fir Zeechen: At-Zeechen">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="@">@ ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="@" aria-label="@ kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">H<b>ë</b>lzer</button><br>
@@ -366,7 +400,8 @@
                 </li>
                 <li>
                     <p>6</p>
-                    <button class="phoneme" id="6">6 ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="6" aria-label="Phonem 6 kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="6">6 ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="6" aria-label="6 kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">sau<b>er</b></button>
@@ -374,7 +409,8 @@
                 </li>
                 <li>
                     <p>e</p>
-                    <button class="phoneme" id="e">e ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="e" aria-label="Phonem e kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="e">e ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="e" aria-label="e kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">Br<b>é</b>cken</button><br>
@@ -383,7 +419,8 @@
                 </li>
                 <li>
                     <p>E:</p>
-                    <button class="phoneme" id="E:">E: ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="E:" aria-label="Phonem E: kopéieren. Zeeche fir Zeechen: grousse Buschtaf E, Duebelpunkt">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="E:">E: ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="E:" aria-label="E: kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>ä</b>r</button><br>
@@ -392,7 +429,8 @@
                 </li>
                 <li>
                     <p>e:</p>
-                    <button class="phoneme" id="e:">e: ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="e:" aria-label="Phonem e: kopéieren. Zeeche fir Zeechen: klenge Buschtaf e, Duebelpunkt">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="e:">e: ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="e:" aria-label="e: kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">h<b>ee</b>feg</button><br>
@@ -401,7 +439,8 @@
                 </li>
                 <li>
                     <p>E~</p>
-                    <button class="phoneme" id="E~">E~ ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="E~" aria-label="Phonem E~ kopéieren. Zeeche fir Zeechen: grousse Buschtaf E, Tilde">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="E~">E~ ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="E~" aria-label="E~ kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">D<b>in</b>de</button>
@@ -409,7 +448,8 @@
                 </li>
                 <li>
                     <p>i</p>
-                    <button class="phoneme" id="i">i ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="i" aria-label="Phonem i kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="i">i ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="i" aria-label="i kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">h<b>i</b>wweleg</button>
@@ -417,7 +457,8 @@
                 </li>
                 <li>
                     <p>i:</p>
-                    <button class="phoneme" id="i:">i: ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="i:" aria-label="Phonem i: kopéieren. Zeeche fir Zeechen: klenge Buschtaf i, Duebelpunkt">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="i:">i: ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="i:" aria-label="i: kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">s<b>i</b>wen</button><br>
@@ -426,7 +467,8 @@
                 </li>
                 <li>
                     <p>o</p>
-                    <button class="phoneme" id="o">o ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="o" aria-label="Phonem o kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="o">o ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="o" aria-label="o kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">H<b>o</b>lztem</button>
@@ -434,7 +476,8 @@
                 </li>
                 <li>
                     <p>O</p>
-                    <button class="phoneme" id="O">O ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="O" aria-label="Phonem O kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="O">O ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="O" aria-label="O kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">C<b>omp</b>toir</button>
@@ -442,7 +485,8 @@
                 </li>
                 <li>
                     <p>o:</p>
-                    <button class="phoneme" id="o:">o: ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="o:" aria-label="Phonem o: kopéieren. Zeeche fir Zeechen: klenge Buschtaf o, Duebelpunkt">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="o:">o: ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="o:" aria-label="o: kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">Spr<b>oo</b>ch</button><br>
@@ -451,7 +495,8 @@
                 </li>
                 <li>
                     <p>u</p>
-                    <button class="phoneme" id="u">u ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="u" aria-label="Phonem u kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="u">u ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="u" aria-label="u kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">h<b>u</b>sch</button>
@@ -459,7 +504,8 @@
                 </li>
                 <li>
                     <p>u:</p>
-                    <button class="phoneme" id="u:">u: ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="u:" aria-label="Phonem u: kopéieren. Zeeche fir Zeechen: klenge Buschtaf u, Duebelpunkt">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="u:">u: ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="u:" aria-label="u: kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">T<b>u</b>t</button><br>
@@ -468,7 +514,8 @@
                 </li>
                 <li>
                     <p>y</p>
-                    <button class="phoneme" id="y">y ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="y" aria-label="Phonem y kopéieren">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="y">y ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="y" aria-label="y kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb"><b>ü</b>ppeg</button>
@@ -482,7 +529,8 @@
             <ul class="row">
                 <li>
                     <p>{:I</p>
-                    <button class="phoneme" id="{:I">{:I ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="{:I" aria-label="Phonem {:I kopéieren. Zeeche fir Zeechen: oppe geschwonge Klammer, Duebelpunkt, grousse Buschtaf I">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="{:I">{:I ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="{:I" aria-label="{:I kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">r<b>äi</b>ch</button>
@@ -490,7 +538,8 @@
                 </li>
                 <li>
                     <p>{:U</p>
-                    <button class="phoneme" id="{:U">{:U ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="{:U" aria-label="Phonem {:U kopéieren. Zeeche fir Zeechen: oppe geschwonge Klammer, Duebelpunkt, grousse Buschtaf U">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="{:U">{:U ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="{:U" aria-label="{:U kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">r<b>au</b></button>
@@ -498,7 +547,8 @@
                 </li>
                 <li>
                     <p>AI</p>
-                    <button class="phoneme" id="AI">AI ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="AI" aria-label="Phonem AI kopéieren. Zeeche fir Zeechen: grousse Buschtaf A, grousse Buschtaf I">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="AI">AI ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="AI" aria-label="AI kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">h<b>ai</b>teg</button>
@@ -506,7 +556,8 @@
                 </li>
                 <li>
                     <p>AU</p>
-                    <button class="phoneme" id="AU">AU ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="AU" aria-label="Phonem AU kopéieren. Zeeche fir Zeechen: grousse Buschtaf A, grousse Buschtaf U">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="AU">AU ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="AU" aria-label="AU kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">Schr<b>au</b>f</button>
@@ -514,7 +565,8 @@
                 </li>
                 <li>
                     <p>3I</p>
-                    <button class="phoneme" id="3I">3I ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="3I" aria-label="Phonem 3I kopéieren. Zeeche fir Zeechen: 3, grousse Buschtaf I">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="3I">3I ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="3I" aria-label="3I kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">er<b>éi</b>scht</button>
@@ -522,7 +574,8 @@
                 </li>
                 <li>
                     <p>eI</p>
-                    <button class="phoneme" id="eI">eI ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="eI" aria-label="Phonem eI kopéieren. Zeeche fir Zeechen: klenge Buschtaf e, grousse Buschtaf I">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="eI">eI ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="eI" aria-label="eI kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example">F<b>a</b>cebook</button>
@@ -530,7 +583,8 @@
                 </li>
                 <li>
                     <p>i@</p>
-                    <button class="phoneme" id="i@">i@ ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="i@" aria-label="Phonem i@ kopéieren. Zeeche fir Zeechen: klenge Buschtaf i, At-Zeechen">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="i@">i@ ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="i@" aria-label="i@ kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">H<b>ie</b>lem</button><br>
@@ -539,7 +593,8 @@
                 </li>
                 <li>
                     <p>6_k</p>
-                    <button class="phoneme" id="6_k">6_k ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="6_k" aria-label="Phonem 6_k kopéieren. Zeeche fir Zeechen: 6, ënneschte Stréch, klenge Buschtaf k">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="6_k">6_k ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="6_k" aria-label="6_k kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">Xav<b>ier</b></button>
@@ -547,7 +602,8 @@
                 </li>
                 <li>
                     <p>oI</p>
-                    <button class="phoneme" id="oI">oI ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="oI" aria-label="Phonem oI kopéieren. Zeeche fir Zeechen: klenge Buschtaf o, grousse Buschtaf I">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="oI">oI ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="oI" aria-label="oI kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">Abent<b>eu</b>er</button>
@@ -555,7 +611,8 @@
                 </li>
                 <li>
                     <p>oU</p>
-                    <button class="phoneme" id="oU">oU ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="oU" aria-label="Phonem oU kopéieren. Zeeche fir Zeechen: klenge Buschtaf o, grousse Buschtaf U">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="oU">oU ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="oU" aria-label="oU kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">d<b>ou</b>dvoll</button>
@@ -563,7 +620,8 @@
                 </li>
                 <li>
                     <p>@U</p>
-                    <button class="phoneme" id="@U">@U ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="@U" aria-label="Phonem @U kopéieren. Zeeche fir Zeechen: At-Zeechen, grousse Buschtaf U">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="@U">@U ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="@U" aria-label="@U kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">Direkti<b>ou</b>n</button>
@@ -571,7 +629,8 @@
                 </li>
                 <li>
                     <p>u@</p>
-                    <button class="phoneme" id="u@">u@ ofspillen</button> <button type="button" class="copy-phoneme" data-phoneme="u@" aria-label="Phonem u@ kopéieren. Zeeche fir Zeechen: klenge Buschtaf u, At-Zeechen">Kopéieren</button>
+                    <div class="phoneme-actions"><button class="phoneme" id="u@">u@ ofspillen</button>
+                        <button type="button" class="copy-phoneme" data-phoneme="u@" aria-label="u@ kopéieren">Kopéieren</button></div>
                     <p>Beispiller:</p>
                     <div class="desc">
                         <button class="example" lang="lb">h<b>ue</b>l</button><br>
@@ -600,24 +659,6 @@
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const status = document.getElementById('copy-status');
-                const special = {
-                    '\\': 'Réckschréigstréch',
-                    '_': 'ënneschte Stréch',
-                    ':': 'Duebelpunkt',
-                    '~': 'Tilde',
-                    '@': 'At-Zeechen',
-                    '{': 'oppe geschwonge Klammer'
-                };
-
-                function spellOut(value) {
-                    return Array.from(value, character => {
-                        if (special[character]) return special[character];
-                        if (/[A-Z]/.test(character)) return 'grousse Buschtaf ' + character;
-                        if (/[a-z]/.test(character)) return 'klenge Buschtaf ' + character;
-                        return character;
-                    }).join(', ');
-                }
-
                 function announce(message) {
                     // Eidel maachen, fir datt och zwou identesch Kopien
                     // hannereneen als nei Statusmeldung erkannt kënne ginn.
@@ -654,14 +695,11 @@
                 document.querySelectorAll('.copy-phoneme').forEach(button => {
                     button.addEventListener('click', async () => {
                         const value = button.dataset.phoneme;
-                        const detail = value.length > 1 || special[value]
-                            ? '. Zeeche fir Zeechen: ' + spellOut(value)
-                            : '';
                         try {
                             await copyText(value);
-                            announce('Phonem ' + value + ' kopéiert' + detail);
+                            announce(value + ' kopéiert');
                         } catch (error) {
-                            announce('Phonem ' + value + ' konnt net kopéiert ginn' + detail);
+                            announce(value + ' konnt net kopéiert ginn');
                         }
                     });
                 });
